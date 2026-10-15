@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>کارت دعوت دیجیتال</title>
+  <title>کارت دعوت دفاع از رساله دکتری</title>
   <style>
     body {
       margin: 0;
@@ -12,7 +12,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #f5efe5;
+      /* پس‌زمینه طیف آبی تیره مدرن و های‌تک متناسب با تصویر شما */
+      background: linear-gradient(135deg, #020b18 0%, #081b2d 50%, #031324 100%);
       font-family: Tahoma, sans-serif;
       padding: 20px;
       box-sizing: border-box;
@@ -21,11 +22,12 @@
       max-width: 450px;
       width: 100%;
       text-align: center;
-      background: #fffdf8;
+      /* کادر با پس‌زمینه تیره و حاشیه فیروزه‌ای ملایم های‌تک */
+      background: rgba(8, 24, 41, 0.9);
       padding: 15px;
-      border: 2px solid #c4a66a;
+      border: 2px solid #00d2ff;
       border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(141, 121, 80, 0.15);
+      box-shadow: 0 10px 40px rgba(0, 210, 255, 0.25);
       box-sizing: border-box;
     }
     .card-image {
@@ -33,31 +35,35 @@
       height: auto;
       border-radius: 12px;
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
     .button {
       display: inline-block;
-      padding: 10px 20px;
-      background: #80663b;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #0072ff 0%, #00d2ff 100%);
       color: white;
       border-radius: 8px;
       text-decoration: none;
       font-size: 14px;
-      transition: background 0.3s;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+      transition: all 0.3s ease;
     }
     .button:hover {
-      background: #624e2c;
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
     }
   </style>
 </head>
 <body>
 
   <main class="card-container">
-    <!-- نام عکس را دقیقاً مشابه نام عکسی که آپلود کردید قرار دهید -->
-    <img src="invitation.jpg" alt="کارت دعوت" class="card-image">
+    <!-- نام عکسی که آپلود کردید -->
+    <img src="invitation.jpg" alt="کارت دعوت دفاع دکتری" class="card-image">
     
-    <!-- لینک گوگل مپ لوکیشن خود را جایگزین متن زیر کنید -->
-    <a class="button" href="https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6" target="_blank" rel="noopener">
+    <!-- لینک گوگل مپ لوکیشن خود را اینجا قرار دهید -->
+    <a class="button" href="https://maps.app.goo.gl/YOUR_LOCATION_LINK" target="_blank" rel="noopener">
        مشاهده موقعیت مکانی در نقشه
     </a>
   </main>
