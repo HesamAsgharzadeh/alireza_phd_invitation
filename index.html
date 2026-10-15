@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کارت دعوت دیجیتال</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f5efe5;
+      font-family: Tahoma, sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-container {
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      background: #fffdf8;
+      padding: 15px;
+      border: 2px solid #c4a66a;
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(141, 121, 80, 0.15);
+      box-sizing: border-box;
+    }
+    .card-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #80663b;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #624e2c;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card-container">
+    <!-- نام عکس را دقیقاً مشابه نام عکسی که آپلود کردید قرار دهید -->
+    <img src="invitation.jpg" alt="کارت دعوت" class="card-image">
+    
+    <!-- لینک گوگل مپ لوکیشن خود را جایگزین متن زیر کنید -->
+    <a class="button" href="https://maps.app.goo.gl/YOUR_LOCATION_LINK" target="_blank" rel="noopener">
+       مشاهده موقعیت مکانی در نقشه
+    </a>
+  </main>
+
+</body>
+</html>
