@@ -1,252 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>کارت دعوت دفاع از رساله دکتری</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: linear-gradient(
-                135deg,
-                #020b18 0%,
-                #081b2d 50%,
-                #031324 100%
-            );
-            font-family: Tahoma, sans-serif;
-            color: #ffffff;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 450px;
-            padding: 15px;
-            text-align: center;
-            background: rgba(8, 24, 41, 0.95);
-            border: 2px solid #00d2ff;
-            border-radius: 18px;
-            box-shadow: 0 10px 40px rgba(0, 210, 255, 0.25);
-        }
-
-        .card-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-            border-radius: 12px;
-        }
-
-        h2 {
-            color: #00d2ff;
-            font-size: 19px;
-            margin: 12px 0;
-        }
-
-        p {
-            color: #d6e8f5;
-            font-size: 13px;
-            line-height: 2;
-        }
-
-        .button {
-            display: inline-block;
-            width: 100%;
-            max-width: 320px;
-            padding: 13px 18px;
-            margin: 7px auto;
-            background: linear-gradient(
-                135deg,
-                #0072ff 0%,
-                #00d2ff 100%
-            );
-            color: #ffffff;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.25);
-            transition: 0.3s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.45);
-        }
-
-        .meeting-section {
-            margin: 10px 0 20px;
-            padding: 15px 10px;
-            border: 1px solid rgba(0, 210, 255, 0.35);
-            border-radius: 12px;
-            background: rgba(0, 210, 255, 0.04);
-        }
-
-        .qr-box {
-            display: inline-block;
-            margin: 10px auto;
-            padding: 12px;
-            background: #ffffff;
-            border-radius: 10px;
-            min-width: 244px;
-            min-height: 244px;
-        }
-
-        #meetingQr {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #meetingQr img,
-        #meetingQr canvas {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .qr-caption {
-            color: #b9d8e9;
-            font-size: 12px;
-            margin: 5px 0;
-        }
-
-        .notice {
-            color: #ffd580;
-            font-size: 12px;
-            overflow-wrap: anywhere;
-        }
-
-        .disabled {
-            opacity: 0.45;
-            pointer-events: none;
-        }
-
-        .map-button {
-            background: linear-gradient(
-                135deg,
-                #394d63,
-                #647d95
-            );
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کارت دعوت دفاع از رساله دکتری</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #020b18 0%, #081b2d 50%, #031324 100%);
+      font-family: Tahoma, sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-container {
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      background: rgba(8, 24, 41, 0.95);
+      padding: 20px;
+      border: 2px solid #00d2ff;
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(0, 210, 255, 0.25);
+      box-sizing: border-box;
+    }
+    .card-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 18px;
+    }
+    .action-section {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #0072ff 0%, #00d2ff 100%);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+    }
+    .qr-container {
+      margin-top: 10px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      align-self: center;
+    }
+    .qr-container img {
+      width: 130px;
+      height: 130px;
+      display: block;
+    }
+    .qr-text {
+      color: #00d2ff;
+      font-size: 13px;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+  </style>
 </head>
-
 <body>
 
-    <main class="card-container">
+  <main class="card-container">
+    <!-- عکس کارت دعوت شما -->
+    <img src="invitation.jpg" alt="کارت دعوت دفاع دکتری" class="card-image">
+    
+    <div class="action-section">
+      <!-- دکمه موقعیت مکانی حضوری -->
+      <a class="button" href="https://maps.app.goo.gl/YOUR_LOCATION_LINK" target="_blank" rel="noopener">
+         مشاهده موقعیت مکانی در نقشه (حضوری)
+      </a>
 
-        <!-- تصویر اصلی دعوت‌نامه -->
-        <img
-            src="invitation.jpg"
-            alt="کارت دعوت دفاع از رساله دکتری"
-            class="card-image"
-        >
+      <!-- دکمه ورود به جلسه آنلاین -->
+      <a class="button" href="https://meet.google.com/YOUR_MEETING_LINK" target="_blank" rel="noopener">
+         ورود به جلسه آنلاین (مجازی)
+      </a>
 
-        <!-- بخش ورود به جلسه آنلاین -->
-        <section class="meeting-section">
-
-            <h2>ورود به جلسه دفاع آنلاین</h2>
-
-            <p>
-                برای شرکت در جلسه، روی دکمه زیر کلیک کنید
-                یا کد QR را با دوربین تلفن همراه اسکن کنید.
-            </p>
-
-            <a
-                id="meetingLink"
-                class="button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ورود به جلسه آنلاین
-            </a>
-
-            <!-- کد QR در این قسمت ساخته می‌شود -->
-            <div class="qr-box">
-                <div id="meetingQr"></div>
-            </div>
-
-            <p class="qr-caption">
-                کد را با دوربین گوشی اسکن کنید
-            </p>
-
-            <p id="meetingNotice" class="notice"></p>
-
-        </section>
-
-        <!-- لینک موقعیت مکانی -->
-        <a
-            class="button map-button"
-            href="https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            مشاهده موقعیت مکانی در نقشه
-        </a>
-
-    </main>
-
-    <!-- کتابخانه تولید QR در مرورگر -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-    <script>
-        // ==========================================
-        // لینک واقعی جلسه را در این قسمت قرار دهید
-        // مثال: لینک Google Meet، Zoom یا سامانه دانشگاه
-        // ==========================================
-
-        const meetingUrl = "https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6";
-
-        const meetingLink = document.getElementById("meetingLink");
-        const qrContainer = document.getElementById("meetingQr");
-        const meetingNotice = document.getElementById("meetingNotice");
-
-        if (meetingUrl === "https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6") {
-
-            // تا زمان وارد کردن لینک واقعی، QR ساخته نمی‌شود.
-            meetingLink.classList.add("disabled");
-            meetingLink.setAttribute("aria-disabled", "true");
-
-         
-        } else {
-
-            // اتصال دکمه به لینک جلسه
-            meetingLink.href = meetingUrl;
-
-            // تولید QR متناظر با همان لینک
-            if (typeof QRCode !== "undefined") {
-
-                new QRCode(qrContainer, {
-                    text: meetingUrl,
-                    width: 220,
-                    height: 220,
-                    colorDark: "#06182b",
-                    colorLight: "#ffffff",
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-
-                meetingNotice.textContent =
-                    "با اسکن این کد، لینک ورود به جلسه باز می‌شود.";
-
-            } else {
-
-                meetingNotice.textContent =
-                    "تولید QR انجام نشد؛ اتصال اینترنت را بررسی کنید.";
-            }
-        }
-    </script>
+      <!-- بخش QR Code برای اسکن سریع لینک آنلاین -->
+      <div class="qr-container">
+        <!-- ساخت خودکار QR Code بر اساس لینک جلسه آنلاین شما -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://meet.google.com/YOUR_MEETING_LINK" alt="QR Code جلسه آنلاین">
+      </div>
+      <p class="qr-text">اسکن جهت ورود به جلسه آنلاین</p>
+    </div>
+  </main>
 
 </body>
 </html>
