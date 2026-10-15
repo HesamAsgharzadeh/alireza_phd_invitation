@@ -189,7 +189,7 @@
         <!-- لینک موقعیت مکانی -->
         <a
             class="button map-button"
-            href="https://maps.app.goo.gl/YOUR_LOCATION_LINK"
+            href="https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6"
             target="_blank"
             rel="noopener noreferrer"
         >
@@ -207,21 +207,19 @@
         // مثال: لینک Google Meet، Zoom یا سامانه دانشگاه
         // ==========================================
 
-        const meetingUrl = "PASTE_MEETING_LINK_HERE";
+        const meetingUrl = "https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6";
 
         const meetingLink = document.getElementById("meetingLink");
         const qrContainer = document.getElementById("meetingQr");
         const meetingNotice = document.getElementById("meetingNotice");
 
-        if (meetingUrl === "PASTE_MEETING_LINK_HERE") {
+        if (meetingUrl === "https://maps.app.goo.gl/oS3qUcH6h3kJNo1Y6") {
 
             // تا زمان وارد کردن لینک واقعی، QR ساخته نمی‌شود.
             meetingLink.classList.add("disabled");
             meetingLink.setAttribute("aria-disabled", "true");
 
-            meetingNotice.textContent =
-                "ابتدا لینک واقعی جلسه را در کد وارد کنید.";
-
+         
         } else {
 
             // اتصال دکمه به لینک جلسه
