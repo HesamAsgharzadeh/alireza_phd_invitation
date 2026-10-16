@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      min-height: 130vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -18,7 +18,7 @@
       box-sizing: border-box;
     }
     .card-container {
-      max-width: 450px;
+      max-width: 600px; /* سایز کادر و عکس بزرگ‌تر شد */
       width: 100%;
       text-align: center;
       background: rgba(8, 24, 41, 0.95);
@@ -92,14 +92,14 @@
       </a>
 
       <!-- دکمه ورود به جلسه آنلاین -->
-      <a class="button" href="https://meet.google.com/dcq-qhwi-rnb " target="_blank" rel="noopener">
+      <a class="button" href="https://meet.google.com/dcq-qhwi-rnb" target="_blank" rel="noopener">
          ورود به جلسه آنلاین (مجازی)
       </a>
 
       <!-- بخش QR Code برای اسکن سریع لینک آنلاین -->
       <div class="qr-container">
         <!-- ساخت خودکار QR Code بر اساس لینک جلسه آنلاین شما -->
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://meet.google.com/dcq-qhwi-rnb " alt="QR Code جلسه آنلاین">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://meet.google.com/dcq-qhwi-rnb" alt="QR Code جلسه آنلاین">
       </div>
       <p class="qr-text">اسکن جهت ورود به جلسه آنلاین</p>
     </div>
